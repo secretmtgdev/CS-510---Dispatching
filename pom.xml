@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>edu.uw.pce</groupId>
+    <artifactId>advjava-deps</artifactId>
+    <version>1.0</version>
+    <relativePath/>
+  </parent>
+  <groupId>edu.uw.advjava.wilsonma</groupId>
+  <artifactId>advjava</artifactId>
+  <packaging>jar</packaging>
+
+  <properties>
+    <student>WilsonMA</student>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>advjava-repository</id>
+      <name>Repository for UWPCE Advanced Java</name>
+	  <url>https://raw.githubusercontent.com/rgmoul/uwpce/main/repository</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>edu.uw.pce.advjava</groupId>
+      <artifactId>support</artifactId>
+	  <version>1.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>edu.uw.pce.advjava</groupId>
+      <artifactId>support</artifactId>
+      <version>1.0</version>
+      <type>test-jar</type>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-suite</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
