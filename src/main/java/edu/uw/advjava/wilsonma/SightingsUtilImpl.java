@@ -11,15 +11,28 @@ import edu.uw.pce.advjava.services.SightingsUtil;
 import edu.uw.pce.advjava.sighting.UfoShape;
 import edu.uw.pce.advjava.sighting.UfoSighting;
 
+/**
+ * Implementation of the SightingsUtil interface.
+ * 
+ * @author Michael Wilson
+ */
 public class SightingsUtilImpl implements SightingsUtil {
 	private Set<UfoSighting> sightings;
 	private Comparator<UfoSighting> comparator = (ufoA, ufoB) -> 
 		ufoA.id() < ufoB.id() ? 1 : (ufoA.id() == ufoB.id() ? 0 : -1);
 	
+	/**
+	 * Default constructor for the Sightings implementation.
+	 */
 	public SightingsUtilImpl() {
 		sightings = new TreeSet<UfoSighting>(comparator);
 	}
 	
+	/**
+	 * Adds a sighting record to the sightings.
+	 * 
+	 * @param sighting The sighting to record.
+	 */
 	public void addSighting(UfoSighting sighting) {
 		sightings.add(sighting);
 	}
@@ -38,7 +51,7 @@ public class SightingsUtilImpl implements SightingsUtil {
 	 * 
 	 * @param startDate The start range for the sightings.
 	 * @param endDate The end range for the sightings.
-	 * @returns The total number of sightings in [startDate, endDate].
+	 * @return The total number of sightings in between the startDate and endDate.
 	 */
 	@Override
 	public long countSigthings(LocalDate startDate, LocalDate endDate) {
@@ -50,7 +63,7 @@ public class SightingsUtilImpl implements SightingsUtil {
 	 * 
 	 * @param startDate The start range for the sightings.
 	 * @param endDate The end range for the sightings.
-	 * @returns The sighting with the maximum duration in [startDate, endDate].
+	 * @return The sighting with the maximum duration in between the startDate and endDate.
 	 */
 	@Override
 	public double maxSightingDuration(LocalDate startDate, LocalDate endDate) {
@@ -66,7 +79,7 @@ public class SightingsUtilImpl implements SightingsUtil {
 	 * @param startDate The start range for the sightings.
 	 * @param endDate The end range for the sightings.
 	 * @param shape The shape of Ufo objects that we expect to return.
-	 * @return The set of Ufo objects that are in [startDate, endDate] and also of the expected shape.
+	 * @return The set of Ufo objects that are in between the startDate and endDate and also of the expected shape.
 	 */
 	@Override
 	public Set<UfoSighting> sightingsByShape(LocalDate startDate, LocalDate endDate, UfoShape shape) {
