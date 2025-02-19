@@ -14,7 +14,9 @@ public class BrokerFactoryImpl implements BrokerFactory {
 	/**
 	 * Default constructor - should not be used.
 	 */
-	public BrokerFactoryImpl() {}
+	public BrokerFactoryImpl() {
+		// no-op
+	}
 
 	/**
 	 * Instantiates a new broker instance.

@@ -14,7 +14,6 @@ import edu.uw.pce.advjava.support.broker.StopOrder;
 public class OrderManagerImpl implements OrderManager {
 	private final String tickerSymbol;
 	
-	private int currentPrice;
 	private TriggeredDispatcherImpl<StopOrder, Integer> buyStopOrderDispatcher;
 	private TriggeredDispatcherImpl<StopOrder, Integer> sellStopOrderDispatcher;
 	
@@ -25,22 +24,21 @@ public class OrderManagerImpl implements OrderManager {
 	 * @param tickerSymbol The symbol
 	 */
 	public OrderManagerImpl(int targetPrice, String tickerSymbol) {
-		currentPrice = targetPrice;
 		this.tickerSymbol = tickerSymbol;
 		Comparator<StopOrder> buyStopComparator = Comparator
 				.comparing(StopOrder::getPrice)				
 				.thenComparing(StopOrder::compareTo);
 		buyStopOrderDispatcher = new TriggeredDispatcherImpl<StopOrder, Integer>(buyStopComparator, 
-				(order, threshold) -> order.getPrice() >= threshold,
-				currentPrice);
+				(order, threshold) -> order.getPrice() <= threshold,
+				targetPrice);
 		
 		Comparator<StopOrder> sellStopComparator = Comparator
 				.comparing(StopOrder::getPrice)
 				.reversed()
 				.thenComparing(StopOrder::compareTo);
 		sellStopOrderDispatcher = new TriggeredDispatcherImpl<StopOrder, Integer>(sellStopComparator, 
-				(order, threshold) -> order.getPrice() <= threshold,
-				currentPrice);
+				(order, threshold) -> order.getPrice() >= threshold,
+				targetPrice);
 	}
 
 	/**
@@ -50,7 +48,8 @@ public class OrderManagerImpl implements OrderManager {
 	 */
 	@Override
 	public void adjustPrice(int newPrice) {
-		currentPrice = newPrice;		
+		buyStopOrderDispatcher.setThreshold(newPrice);
+		sellStopOrderDispatcher.setThreshold(newPrice);
 	}
 
 	/**

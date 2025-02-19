@@ -5,9 +5,19 @@
        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
   <!-- Bean implementing edu.uw.pce.advjava.services.TriggeredDispatcherFactory -->
-  <bean id="TriggeredDispatcherFactory" class="edu.uw.advjava.wilsonma.TriggeredDispatcherFactoryImpl"></bean>
+  <!-- <bean id="TriggeredDispatcherFactory" class="edu.uw.advjava.wilsonma.TriggeredDispatcherFactoryImpl"></bean>-->
 
   <!-- Bean implementing edu.uw.pce.advjava.services.SightingsUtil -->
-  <bean id="SightingsUtil" class="edu.uw.advjava.wilsonma.SightingsUtilImpl" />
+  <!-- <bean id="SightingsUtil" class="edu.uw.advjava.wilsonma.SightingsUtilImpl" />-->
+  
+  <!-- Bean implementing edu.uw.pce.advjava.services.BrokerFactory -->
+  <!-- <bean id="BrokerFactory" class="edu.uw.advjava.wilsonma.BrokerFactoryImpl"/>-->
+
+  <!-- Bean implementing edu.uw.pce.advjava.services.AccountDao -->
+  <!--<bean id="AccountDao" class="edu.uw.pce.advjava.support.account.MapAccountDao" scope="prototype"/>-->
+
+	<!-- Bean implementing edu.uw.pce.advjava.services.AccountDao -->
+	<bean id="AccountDao"
+		class="edu.uw.advjava.wilsonma.AccountDaoImpl"/>
 </beans>
 

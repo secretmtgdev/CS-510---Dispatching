@@ -40,19 +40,18 @@ public class BrokerFactoryImplTests {
 	private final String DEFAULT_STOCK_TICKER = DEFAULT_FAUX_MARKET.SYMBOL_UMBL;
 	private final int DEFAULT_STOP_PRICE = 5;
 	
-	private final ClientOrder clientOrder = new ClientOrder();
 	private final MarketBuyOrder marketBuyOrder = new MarketBuyOrder(DEFAULT_ACCOUNT_NAME, DEFAULT_NUMBER_OF_SHARES, DEFAULT_STOCK_TICKER);
 	private final MarketSellOrder marketSellOrder = new MarketSellOrder(DEFAULT_ACCOUNT_NAME, DEFAULT_NUMBER_OF_SHARES, DEFAULT_STOCK_TICKER);
 	private final StopBuyOrder stopBuyOrder = new StopBuyOrder(DEFAULT_ACCOUNT_NAME, DEFAULT_NUMBER_OF_SHARES, DEFAULT_STOCK_TICKER, DEFAULT_STOP_PRICE);
 	private final StopSellOrder stopSellOrder = new StopSellOrder(DEFAULT_ACCOUNT_NAME, DEFAULT_NUMBER_OF_SHARES, DEFAULT_STOCK_TICKER, DEFAULT_STOP_PRICE);
-	private final StockQuote stockQuote = new StockQuote(DEFAULT_STOCK_TICKER, DEFAULT_STOP_PRICE);
 	
 	private Broker defaultBroker;
 	
 	// This should not throw an exception
 	@BeforeEach
 	public void init() throws BrokerException {
-		defaultBroker = new BrokerFactoryImpl().newBroker(DEFAULT_NAME, DEFAULT_MANAGER, DEFAULT_STOCK_EXCHANGE);
+		BrokerFactoryImpl brokerFactory = new BrokerFactoryImpl();
+		defaultBroker = brokerFactory.newBroker(DEFAULT_NAME, DEFAULT_MANAGER, DEFAULT_STOCK_EXCHANGE);
 		if (defaultBroker.getAccount(DEFAULT_ACCOUNT_NAME, DEFAULT_PASSWORD) == null) {			
 			defaultBroker.createAccount(DEFAULT_ACCOUNT_NAME, DEFAULT_PASSWORD, DEFAULT_BALANCE, DEFAULT_NAME);
 		}

@@ -2,7 +2,11 @@ edu\uw\advjava\template\RomanNumeral.class
 edu\uw\advjava\wilsonma\SightingsUtilImpl.class
 edu\uw\advjava\wilsonma\TriggeredDispatcherFactoryImpl.class
 edu\uw\advjava\template\RomanNumeral$RomanEquiv.class
+edu\uw\advjava\wilsonma\AccountDaoImpl.class
 edu\uw\advjava\wilsonma\TriggeredDispatcherImpl.class
+edu\uw\advjava\wilsonma\AccountService.class
+edu\uw\advjava\wilsonma\AddressService.class
 edu\uw\advjava\wilsonma\BrokerFactoryImpl.class
 edu\uw\advjava\wilsonma\BrokerImpl.class
+edu\uw\advjava\wilsonma\BankService.class
 edu\uw\advjava\wilsonma\OrderManagerImpl.class

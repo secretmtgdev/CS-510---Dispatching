@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.uw.pce.advjava.support.account.AccountDaoTest" time="0.355" tests="4" errors="3" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\cse_510\assignments\assignment_1\advjava\target\test-classes;D:\cse_510\assignments\assignment_1\advjava\target\classes;C:\Users\piano\.m2\repository\edu\uw\pce\advjava\support\1.0\support-1.0.jar;C:\Users\piano\.m2\repository\org\springframework\spring-context\6.1.5\spring-context-6.1.5.jar;C:\Users\piano\.m2\repository\org\springframework\spring-aop\6.1.5\spring-aop-6.1.5.jar;C:\Users\piano\.m2\repository\org\springframework\spring-beans\6.1.5\spring-beans-6.1.5.jar;C:\Users\piano\.m2\repository\org\springframework\spring-core\6.1.5\spring-core-6.1.5.jar;C:\Users\piano\.m2\repository\org\springframework\spring-jcl\6.1.5\spring-jcl-6.1.5.jar;C:\Users\piano\.m2\repository\org\springframework\spring-expression\6.1.5\spring-expression-6.1.5.jar;C:\Users\piano\.m2\repository\io\micrometer\micrometer-observation\1.12.4\micrometer-observation-1.12.4.jar;C:\Users\piano\.m2\repository\io\micrometer\micrometer-commons\1.12.4\micrometer-commons-1.12.4.jar;C:\Users\piano\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\piano\.m2\repository\org\slf4j\slf4j-jdk14\2.0.12\slf4j-jdk14-2.0.12.jar;C:\Users\piano\.m2\repository\org\apache\derby\derby\10.17.1.0\derby-10.17.1.0.jar;C:\Users\piano\.m2\repository\org\apache\derby\derbyshared\10.17.1.0\derbyshared-10.17.1.0.jar;C:\Users\piano\.m2\repository\org\apache\derby\derbyclient\10.17.1.0\derbyclient-10.17.1.0.jar;C:\Users\piano\.m2\repository\org\apache\derby\derbynet\10.17.1.0\derbynet-10.17.1.0.jar;C:\Users\piano\.m2\repository\org\apache\derby\derbytools\10.17.1.0\derbytools-10.17.1.0.jar;C:\Users\piano\.m2\repository\org\apache\commons\commons-csv\1.10.0\commons-csv-1.10.0.jar;C:\Users\piano\.m2\repository\edu\uw\pce\advjava\support\1.0\support-1.0-tests.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-suite\1.10.2\junit-platform-suite-1.10.2.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-suite-api\1.10.2\junit-platform-suite-api-1.10.2.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\piano\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.10.2\junit-platform-suite-engine-1.10.2.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.10.2\junit-platform-suite-commons-1.10.2.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.2\junit-platform-launcher-1.10.2.jar;C:\Users\piano\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\piano\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\piano\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\piano\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\piano\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-23\bin"/>
+    <property name="sun.java.command" value="C:\Users\piano\AppData\Local\Temp\surefire16272278601629729155\surefirebooter-20250213150747111_3.jar C:\Users\piano\AppData\Local\Temp\surefire16272278601629729155 2025-02-13T15-07-46_767-jvmRun1 surefire-20250213150747111_1tmp surefire_0-20250213150747111_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\cse_510\assignments\assignment_1\advjava\target\test-classes;D:\cse_510\assignments\assignment_1\advjava\target\classes;C:\Users\piano\.m2\repository\edu\uw\pce\advjava\support\1.0\support-1.0.jar;C:\Users\piano\.m2\repository\org\springframework\spring-context\6.1.5\spring-context-6.1.5.jar;C:\Users\piano\.m2\repository\org\springframework\spring-aop\6.1.5\spring-aop-6.1.5.jar;C:\Users\piano\.m2\repository\org\springframework\spring-beans\6.1.5\spring-beans-6.1.5.jar;C:\Users\piano\.m2\repository\org\springframework\spring-core\6.1.5\spring-core-6.1.5.jar;C:\Users\piano\.m2\repository\org\springframework\spring-jcl\6.1.5\spring-jcl-6.1.5.jar;C:\Users\piano\.m2\repository\org\springframework\spring-expression\6.1.5\spring-expression-6.1.5.jar;C:\Users\piano\.m2\repository\io\micrometer\micrometer-observation\1.12.4\micrometer-observation-1.12.4.jar;C:\Users\piano\.m2\repository\io\micrometer\micrometer-commons\1.12.4\micrometer-commons-1.12.4.jar;C:\Users\piano\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\piano\.m2\repository\org\slf4j\slf4j-jdk14\2.0.12\slf4j-jdk14-2.0.12.jar;C:\Users\piano\.m2\repository\org\apache\derby\derby\10.17.1.0\derby-10.17.1.0.jar;C:\Users\piano\.m2\repository\org\apache\derby\derbyshared\10.17.1.0\derbyshared-10.17.1.0.jar;C:\Users\piano\.m2\repository\org\apache\derby\derbyclient\10.17.1.0\derbyclient-10.17.1.0.jar;C:\Users\piano\.m2\repository\org\apache\derby\derbynet\10.17.1.0\derbynet-10.17.1.0.jar;C:\Users\piano\.m2\repository\org\apache\derby\derbytools\10.17.1.0\derbytools-10.17.1.0.jar;C:\Users\piano\.m2\repository\org\apache\commons\commons-csv\1.10.0\commons-csv-1.10.0.jar;C:\Users\piano\.m2\repository\edu\uw\pce\advjava\support\1.0\support-1.0-tests.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-suite\1.10.2\junit-platform-suite-1.10.2.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-suite-api\1.10.2\junit-platform-suite-api-1.10.2.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\piano\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.10.2\junit-platform-suite-engine-1.10.2.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.10.2\junit-platform-suite-commons-1.10.2.jar;C:\Users\piano\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.2\junit-platform-launcher-1.10.2.jar;C:\Users\piano\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\piano\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\piano\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\piano\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\piano\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\piano"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-23"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\cse_510\assignments\assignment_1\advjava"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\piano\AppData\Local\Temp\surefire16272278601629729155\surefirebooter-20250213150747111_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="23.0.1+11-39"/>
+    <property name="user.name" value="piano"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\piano\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\piano\AppData\Local\Temp\"/>
+    <property name="java.version" value="23.0.1"/>
+    <property name="user.dir" value="D:\cse_510\assignments\assignment_1\advjava"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-23\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\dotnet-core-uninstall\;C:\ProgramData\chocolatey\bin;C:\Users\piano\AppData\Local\Microsoft\WindowsApps;C:\Users\piano\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\piano\.dotnet\tools;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\nodejs\;C:\Users\piano\AppData\Local\Microsoft\WindowsApps;C:\Users\piano\.dotnet\tools;C:\Users\piano\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\apache-maven-3.9.9\bin;C:\Program Files\Java\jdk-23\bin;C:\Program Files\nodejs;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="23.0.1+11-39"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="testClose" classname="edu.uw.pce.advjava.support.account.AccountDaoTest" time="0.216">
+    <system-err><![CDATA[Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl accounts
+INFO: Getting all account names.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Thomas Anderson
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Finished writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.BankService writeFile
+INFO: Writing bank information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Alice Abernathy
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Finished writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.BankService writeFile
+INFO: Writing bank information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Pepper Potts
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Finished writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.BankService writeFile
+INFO: Writing bank information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Rachael
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl close
+INFO: Closing the account dao.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl retrieveAccount
+INFO: Getting account with the name aabernathy
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl close
+INFO: Closing the account dao.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl close
+INFO: Closing the account dao.
+]]></system-err>
+  </testcase>
+  <testcase name="testCrud" classname="edu.uw.pce.advjava.support.account.AccountDaoTest" time="0.044">
+    <error message="Cannot invoke &quot;edu.uw.pce.advjava.support.account.Account.getName()&quot; because &quot;actual&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "edu.uw.pce.advjava.support.account.Account.getName()" because "actual" is null
+	at edu.uw.pce.advjava.support.account.AccountDaoTest.compareAccounts(AccountDaoTest.java:92)
+	at edu.uw.pce.advjava.support.account.AccountDaoTest.testCrud(AccountDaoTest.java:135)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+    <system-err><![CDATA[Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl accounts
+INFO: Getting all account names.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleting account neotheone
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleted account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleting account pepper_potts
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleted account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleting account rachaelnex
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleted account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleting account aabernathy
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleted account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Thomas Anderson
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Finished writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.BankService writeFile
+INFO: Writing bank information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Alice Abernathy
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Finished writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.BankService writeFile
+INFO: Writing bank information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Pepper Potts
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Finished writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.BankService writeFile
+INFO: Writing bank information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Rachael
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl retrieveAccount
+INFO: Getting account with the name neotheone
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl close
+INFO: Closing the account dao.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl close
+INFO: Closing the account dao.
+]]></system-err>
+  </testcase>
+  <testcase name="testDelete" classname="edu.uw.pce.advjava.support.account.AccountDaoTest" time="0.031">
+    <error message="Cannot invoke &quot;edu.uw.pce.advjava.support.account.Account.getName()&quot; because &quot;actual&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "edu.uw.pce.advjava.support.account.Account.getName()" because "actual" is null
+	at edu.uw.pce.advjava.support.account.AccountDaoTest.compareAccounts(AccountDaoTest.java:92)
+	at edu.uw.pce.advjava.support.account.AccountDaoTest.testDelete(AccountDaoTest.java:205)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+    <system-err><![CDATA[Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl accounts
+INFO: Getting all account names.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleting account neotheone
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleted account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleting account pepper_potts
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleted account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleting account rachaelnex
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleted account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleting account aabernathy
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleted account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Thomas Anderson
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Finished writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.BankService writeFile
+INFO: Writing bank information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Alice Abernathy
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Finished writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.BankService writeFile
+INFO: Writing bank information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Pepper Potts
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Finished writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.BankService writeFile
+INFO: Writing bank information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Rachael
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl retrieveAccount
+INFO: Getting account with the name aabernathy
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl close
+INFO: Closing the account dao.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl close
+INFO: Closing the account dao.
+]]></system-err>
+  </testcase>
+  <testcase name="testReload" classname="edu.uw.pce.advjava.support.account.AccountDaoTest" time="0.033">
+    <error message="Cannot invoke &quot;edu.uw.pce.advjava.support.account.Account.getName()&quot; because &quot;actual&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "edu.uw.pce.advjava.support.account.Account.getName()" because "actual" is null
+	at edu.uw.pce.advjava.support.account.AccountDaoTest.compareAccounts(AccountDaoTest.java:92)
+	at edu.uw.pce.advjava.support.account.AccountDaoTest.testReload(AccountDaoTest.java:180)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+    <system-err><![CDATA[Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl accounts
+INFO: Getting all account names.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleting account neotheone
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleted account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleting account pepper_potts
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleted account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleting account rachaelnex
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleted account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleting account aabernathy
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl deleteAccount
+INFO: Deleted account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Thomas Anderson
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Finished writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.BankService writeFile
+INFO: Writing bank information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Alice Abernathy
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Finished writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.BankService writeFile
+INFO: Writing bank information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Pepper Potts
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AddressService writeFile
+INFO: Finished writing address information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.BankService writeFile
+INFO: Writing bank information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Creating an account for Rachael
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountService writeFile
+INFO: Finished writing account information.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl createAccount
+INFO: Created the account.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl retrieveAccount
+INFO: Getting account with the name neotheone
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl close
+INFO: Closing the account dao.
+Feb 13, 2025 3:07:47 PM edu.uw.advjava.wilsonma.AccountDaoImpl close
+INFO: Closing the account dao.
+]]></system-err>
+  </testcase>
+</testsuite>

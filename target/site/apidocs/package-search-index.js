@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"edu.uw.advjava.template"},{"l":"edu.uw.advjava.wilsonma"}];updateSearchResults();

@@ -23,6 +23,7 @@ import edu.uw.pce.advjava.support.exchange.StockQuote;
  * 
  * @author Michael Wilson
  */
+@SuppressWarnings("unused")
 public class BrokerImpl implements Broker, ExchangeListener {
 	private final StockExchange stockExchange;
 	private final AccountManager accountManager;
@@ -48,19 +49,23 @@ public class BrokerImpl implements Broker, ExchangeListener {
 		// listen to price changes
 		stockExchange.addExchangeListener(this);
 		
-		// Set up a manger for each stock
-		for(String ticker : stockExchange.getStockTickerSymbols()) {
-			Optional<StockQuote> oPrice = stockExchange.getQuote(ticker);
-			int price = oPrice.get().getPrice();
-			orderManagers.put(ticker, new OrderManagerImpl(price, ticker));
-		}
-				
 		Comparator<Order> marketOrderComparator = Comparator
 				.comparing(Order::getNumberOfShares)
+				.reversed()
 				.thenComparing(Order::compareTo);
 		
 		// under the assumption that all market orders are dispatchable
 		marketOrders = new TriggeredDispatcherImpl<>(marketOrderComparator, (e, t) -> true, true);
+		marketOrders.setDispatchAction(this::executeOrder);
+		
+		// Set up a manger for each stock
+		for(String ticker : stockExchange.getStockTickerSymbols()) {
+			Optional<StockQuote> oPrice = stockExchange.getQuote(ticker);
+			int price = oPrice.get().getPrice();
+			OrderManager om = new OrderManagerImpl(price, ticker);
+			om.setStopOrderProcessor(marketOrders::enqueue);
+			orderManagers.put(ticker, om);
+		}				
 	}
 
 	/**
@@ -130,7 +135,9 @@ public class BrokerImpl implements Broker, ExchangeListener {
 	@Override
 	public Account getAccount(String accountName, String password) throws BrokerException {
 		try {
-			accountManager.validateLogin(accountName, password);
+			if (!accountManager.validateLogin(accountName, password)) {
+				return null;
+			}
 		} catch (AccountException e) {
 			throw new BrokerException("Failed to validate login: " + e.getMessage());
 		}
@@ -220,4 +227,17 @@ public class BrokerImpl implements Broker, ExchangeListener {
 		String stockTicker = event.getTicker();
 		orderManagers.get(stockTicker).adjustPrice(event.getPrice());
 	}
+	
+	private void executeOrder(final Order order) {
+		final int sharePrice = stockExchange.executeTrade(order);
+	    Account acct;
+		try {
+			acct = accountManager.getAccount(order.getAccountId());
+		    if (acct != null) {
+		        acct.reflectOrder(order, sharePrice);
+		    }
+		} catch (AccountException ex) {
+			System.out.println("Error: " + ex.getMessage());
+		}
+    }
 }

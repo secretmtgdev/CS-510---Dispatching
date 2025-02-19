@@ -32,6 +32,7 @@ public class TriggeredDispatcherImpl<E, T> implements TriggeredDispatcher<E, T> 
 		this.priorityQueue = new TreeSet<>(cmp);
 		this.filter = filter;
 		this.threshold = initialThreshold;
+		dispatchOrders();
 	}
 	
 	/**
@@ -128,7 +129,7 @@ public class TriggeredDispatcherImpl<E, T> implements TriggeredDispatcher<E, T> 
 	private void dispatchOrders() {
 		while (!this.priorityQueue.isEmpty()) {
 			if (this.isDispatchAvailable() && this.canDispatch()) {
-				this.priorityQueue.pollFirst();				
+				this.dispatchAction.accept(this.priorityQueue.pollFirst());
 			} else {
 				break;
 			}

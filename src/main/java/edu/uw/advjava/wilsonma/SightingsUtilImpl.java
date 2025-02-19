@@ -37,15 +37,6 @@ public class SightingsUtilImpl implements SightingsUtil {
 		sightings.add(sighting);
 	}
 	
-	private Stream<UfoSighting> getSightingsByDateRange(LocalDate startDate, LocalDate endDate) {
-		LocalDate adjustedStart = startDate.minusDays(1);
-		LocalDate adjustedEnd = endDate.plusDays(1);
-		return sightings.stream()
-				.filter(ufo -> 
-					ufo.dateDocumented().isAfter(adjustedStart) && 
-					ufo.dateDocumented().isBefore(adjustedEnd));
-	}
-	
 	/** 
 	 * Count the number of sightings occurring between the specified dates. 
 	 * 
@@ -55,8 +46,10 @@ public class SightingsUtilImpl implements SightingsUtil {
 	 */
 	@Override
 	public long countSigthings(LocalDate startDate, LocalDate endDate) {
-		return getSightingsByDateRange(startDate, endDate).count();
-	}
+	      return UfoSighting.streamOf().filter(s -> (!s.observationTime().toLocalDate().isBefore(startDate) && 
+                (!s.observationTime().toLocalDate().isAfter(endDate))))
+               .count();
+   }
 
 	/** 
 	 * Obtain the longest duration of an observation occurring between the specified dates. 
@@ -67,11 +60,11 @@ public class SightingsUtilImpl implements SightingsUtil {
 	 */
 	@Override
 	public double maxSightingDuration(LocalDate startDate, LocalDate endDate) {
-		return getSightingsByDateRange(startDate, endDate)
-				.mapToDouble(UfoSighting::encounterDuration)
-				.max()
-				.orElse(0);
-	}
+		return UfoSighting.streamOf().filter(s -> (!s.observationTime().toLocalDate().isBefore(startDate) && 
+                        (!s.observationTime().toLocalDate().isAfter(endDate))))
+           .mapToDouble(UfoSighting::encounterDuration)
+           .max().orElse(0);
+   }
 
 	/** 
 	 * Obtains a subset of signtings occurring between the specified dates and having the specified shape.
@@ -83,10 +76,10 @@ public class SightingsUtilImpl implements SightingsUtil {
 	 */
 	@Override
 	public Set<UfoSighting> sightingsByShape(LocalDate startDate, LocalDate endDate, UfoShape shape) {
-		 Stream<UfoSighting> filteredSightings = getSightingsByDateRange(startDate, endDate)
-				.filter(ufo -> ufo.ufoShape()
-							.equals(shape));
-		 return filteredSightings.collect(Collectors.toCollection(() -> new TreeSet<UfoSighting>(comparator)));
-	}
+		return UfoSighting.streamOf().filter(s -> (!s.observationTime().toLocalDate().isBefore(startDate) && 
+                        (!s.observationTime().toLocalDate().isAfter(endDate))))
+				.filter(s -> s.ufoShape() == shape)
+				.collect(Collectors.toSet());
+   }
 
 }

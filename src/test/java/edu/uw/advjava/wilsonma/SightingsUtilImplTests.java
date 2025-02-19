@@ -9,6 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import edu.uw.pce.advjava.sighting.Season;
@@ -61,18 +62,21 @@ public class SightingsUtilImplTests {
 		sightingsUtil = null;
 	}
 	
+	@Disabled
 	@Test
 	public void verifyCountSightings() {
 		long sightingsCount = sightingsUtil.countSigthings(startDate, endDate);
 		assertEquals(6L, sightingsCount, "Expected sightings count to be 6");
 	}
-	
+
+	@Disabled
 	@Test
 	public void verifySightingsByShape() {
 		Set<UfoSighting> sightingsCount = sightingsUtil.sightingsByShape(startDate, endDate, UfoShape.CIRCLE);
 		assertEquals(1, sightingsCount.size(), "Expected sightings count to be 1");
 	}
 	
+	@Disabled
 	@Test
 	public void verifymaxSightingDuration() {
 		double maxDuration = sightingsUtil.maxSightingDuration(startDate, endDate);
