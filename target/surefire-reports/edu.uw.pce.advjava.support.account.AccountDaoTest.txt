@@ -1,27 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: edu.uw.pce.advjava.support.account.AccountDaoTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.355 s <<< FAILURE! - in edu.uw.pce.advjava.support.account.AccountDaoTest
-edu.uw.pce.advjava.support.account.AccountDaoTest.testCrud  Time elapsed: 0.044 s  <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "edu.uw.pce.advjava.support.account.Account.getName()" because "actual" is null
-	at edu.uw.pce.advjava.support.account.AccountDaoTest.compareAccounts(AccountDaoTest.java:92)
-	at edu.uw.pce.advjava.support.account.AccountDaoTest.testCrud(AccountDaoTest.java:135)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-
-edu.uw.pce.advjava.support.account.AccountDaoTest.testDelete  Time elapsed: 0.031 s  <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "edu.uw.pce.advjava.support.account.Account.getName()" because "actual" is null
-	at edu.uw.pce.advjava.support.account.AccountDaoTest.compareAccounts(AccountDaoTest.java:92)
-	at edu.uw.pce.advjava.support.account.AccountDaoTest.testDelete(AccountDaoTest.java:205)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-
-edu.uw.pce.advjava.support.account.AccountDaoTest.testReload  Time elapsed: 0.033 s  <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "edu.uw.pce.advjava.support.account.Account.getName()" because "actual" is null
-	at edu.uw.pce.advjava.support.account.AccountDaoTest.compareAccounts(AccountDaoTest.java:92)
-	at edu.uw.pce.advjava.support.account.AccountDaoTest.testReload(AccountDaoTest.java:180)
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.848 s <<< FAILURE! - in edu.uw.pce.advjava.support.account.AccountDaoTest
+edu.uw.pce.advjava.support.account.AccountDaoTest.testCrud  Time elapsed: 0.189 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected edu.uw.pce.advjava.support.account.AccountException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at edu.uw.pce.advjava.support.account.AccountDaoTest.testCrud(AccountDaoTest.java:157)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)

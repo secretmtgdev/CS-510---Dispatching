@@ -18,6 +18,6 @@
 
 	<!-- Bean implementing edu.uw.pce.advjava.services.AccountDao -->
 	<bean id="AccountDao"
-		class="edu.uw.advjava.wilsonma.AccountDaoImpl"/>
+		class="edu.uw.advjava.wilsonma.AccountDaoDB"/>
 </beans>
 

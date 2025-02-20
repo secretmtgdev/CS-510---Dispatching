@@ -1,0 +1,15 @@
+Thu Feb 20 12:23:38 PST 2025 : Apache Derby Network Server - 10.17.1.0 - (1913217) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Thu Feb 20 12:23:38 PST 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.17.1.0 - (1913217): instance a816c00e-0195-2507-b992-00004ee9df7b 
+on database directory memory:D:\cse_510\assignments\assignment_1\advjava\target\derbyDb\accountDb with class loader org.codehaus.mojo.exec.URLClassLoaderBuilder$ExecJavaClassLoader@1a4d1ab7 
+Loaded from file:/C:/Users/piano/.m2/repository/org/apache/derby/derby/10.17.1.0/derby-10.17.1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=23.0.1+11-39
+user.dir=D:\cse_510\assignments\assignment_1\advjava
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=target/derbyDb
+Database Class Loader started - derby.database.classpath=''
+Thu Feb 20 14:57:50 PST 2025 : Apache Derby Network Server - 10.17.1.0 - (1913217) shutdown
